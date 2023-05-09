@@ -19,9 +19,8 @@ state = {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const savedContacts = localStorage.setItem('savedContacts', JSON.stringify(this.state.contacts));
-    console.log('update')
+  componentDidUpdate() {
+    localStorage.setItem('savedContacts', JSON.stringify(this.state.contacts));
   }
 
   handleAddContact = (contact) => {
